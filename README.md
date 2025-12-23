@@ -1,4 +1,4 @@
-# mysql-query-optimization
+# MySQL Performance Tuning
 
 > A hands-on lab created while studying SQL query optimization concepts,  
 > inspired by the following YouTube playlist:  
