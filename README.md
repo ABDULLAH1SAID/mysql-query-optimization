@@ -8,4 +8,3 @@ This repository focuses on practical experiments, execution plan analysis using
 `EXPLAIN`, and performance comparisons in MySQL, with the goal of understanding
 how different queries and indexing strategies impact database performance.
 
-تشغيل الكل
