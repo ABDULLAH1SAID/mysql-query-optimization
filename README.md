@@ -52,3 +52,38 @@ This repo will serve as:
 - A learning log
 - A reference for common optimization patterns
 - A showcase of hands-on MySQL performance tuning skills
+
+---
+
+## 🗄️ Database Schema (Test Data)
+
+This repository uses a **sample `userinfo` table** to simulate real-world workloads
+and test different query optimization and indexing strategies.
+
+The table is intentionally designed to:
+- Contain **millions of rows** (for realistic performance testing)
+- Include columns commonly used in:
+  - `WHERE` clauses
+  - `JOIN` operations
+  - `ORDER BY` and `LIMIT`
+- Highlight the impact of **indexes vs full table scans**
+
+### 📌 Table: `userinfo`
+
+```sql
+CREATE TABLE userinfo (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(64) NOT NULL DEFAULT '',
+    email VARCHAR(64) NOT NULL DEFAULT '',
+    password VARCHAR(64) NOT NULL DEFAULT '',
+    dob DATE NULL,
+    address VARCHAR(255) NOT NULL DEFAULT '',
+    city VARCHAR(64) NOT NULL DEFAULT '',
+    state_id SMALLINT NOT NULL DEFAULT 0,
+    zip VARCHAR(8) NOT NULL DEFAULT '',
+    country_id SMALLINT NOT NULL DEFAULT 0,
+    account_type VARCHAR(32) NOT NULL DEFAULT '',
+    closest_airport VARCHAR(3) NOT NULL DEFAULT '',
+    PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+```
