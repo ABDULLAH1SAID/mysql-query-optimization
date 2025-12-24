@@ -68,8 +68,9 @@ The table is intentionally designed to:
   - `ORDER BY` and `LIMIT`
 - Highlight the impact of **indexes vs full table scans**
 
-### 📌 Table: `userinfo`
+---
 
+### 📌 Table: `userinfo`
 ```sql
 CREATE TABLE userinfo (
     id INT NOT NULL AUTO_INCREMENT,
@@ -87,3 +88,16 @@ CREATE TABLE userinfo (
     PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
+---
+### Dataset Generation
+
+To simulate real-world performance issues, I generated a large dataset for testing.
+
+- A `userinfo` table was created
+- A stored procedure was used to generate **5 million rows**
+- The dataset is intentionally large to:
+  - Trigger Full Table Scans
+  - Test Index effectiveness
+  - Analyze execution plans under load
+
+
